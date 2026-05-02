@@ -1,0 +1,46 @@
+body {
+    padding-top: 70px;
+}
+
+
+/*
+.navbar.navbar-expand-lg {
+    background-color: black !important;
+    color: yellow !important;
+} 
+*/
+
+.navbar-brand {
+    margin-left: -200px;
+}
+
+a .bi{
+    color: var(--branco);
+}
+
+a .bi:hover{
+    color:var(--branc50);
+}
+
+a .bi:hover{
+    color: var(--branco50);
+}
+
+#footer-class {
+    font-size:14px;
+}
+
+h1{
+    color: var(--preto);
+    text-align: center;
+    margin-top:10px;
+    padding: 20px;
+}
+
+p {
+    color: var(--preto);
+    text-align: center;
+    padding: 20px;
+
+}
+
