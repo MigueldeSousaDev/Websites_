@@ -21,10 +21,11 @@ Website de empresa / escola artística (tema livre).
 5. **Contacto** (`contacto.html`) – mapa, informações de contacto e formulário com validação.
 
 ## Funcionalidades JavaScript implementadas
-1. **Filtro de cursos** – pesquisa por nome do curso ou categoria.
-2. **Simulação de lista de interesses** – notificação Toast ao clicar em “Adicionar à lista de interesses”.
-3. **Validação de formulário de contacto** – verificação de nome, email, assunto, mensagem e telefone opcional.
-4. **Barra de pesquisa no cabeçalho** – filtra cursos em cursos.html ou redireciona para lá.
+1. **Simulação de lista de interesses** – notificação Toast ao clicar em “Adicionar à lista de interesses”.
+2. **Filtro de cursos** – pesquisa por nome do curso ou categoria (página cursos.html).
+3. **Barra de pesquisa no cabeçalho** – presente em todas as páginas.
+4. **Validação de formulário de contacto** – verificação de nome, email, assunto, mensagem e telefone opcional.
+
 
 ## Como executar o projeto
 1. Clonar o repositório.

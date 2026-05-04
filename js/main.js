@@ -2,7 +2,7 @@
  * Funcionalidades:
  * 1. Toast "Adicionar à lista de interesses"
  * 2. Filtro de cursos (campo local + barra do cabeçalho)
- * 3. NavBar > Pesquisa
+ * 3. Barra de Pesquisa NAVBAR (Cabeçalho)
  * 4. Validação do formulário de contacto
  */
 
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // =====================================================================
     // 1. TOAST (NOTIFICAÇÃO)
-    // =====================================================================
+    
     let toastTrigger = document.getElementById('liveToastBtn');
     let toastLiveExample = document.getElementById('liveToastFeedback');
 
@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // =====================================================================
     // 3. BARRA DE PESQUISA DO CABEÇALHO (presente em todas as páginas)
-    // =====================================================================
+
     let formPesquisa = document.getElementById('formPesquisa');
 
     if (formPesquisa) {
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // =====================================================================
     // 4. VALIDAÇÃO DO FORMULÁRIO DE CONTACTO
-    // =====================================================================
+
     let formContacto = document.getElementById('formContacto');
 
     if (formContacto) {
@@ -152,12 +152,21 @@ document.addEventListener('DOMContentLoaded', function() {
                 mensagemErro += '• O nome deve ter pelo menos 3 caracteres e conter apenas letras.\n';
             }
 
+            /* A-Z	Letras maiúsculas de A a Z	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            a-z	Letras minúsculas de a a z	abcdefghijklmnopqrstuvwxyz
+            À-Ö	Letras acentuadas MAIÚSCULAS (comum em português)	ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ
+            Ø-ö	Letras especiais e minúsculas acentuadas	ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö
+            ø-ÿ	Mais letras especiais	øùúûüýþÿ
+            \s	Espaço em branco	" " (espaço normal)*/
+
             // Email
             let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 valido = false;
                 mensagemErro += '• Insira um endereço de email válido.\n';
             }
+
+
 
             // Assunto
             if (!assunto) {
@@ -210,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // =====================================================================
     // Inicializar todos os toasts visíveis (caso existam)
-    // =====================================================================
+  
     let todosToasts = document.querySelectorAll('.toast');
     for (let i = 0; i < todosToasts.length; i++) {
         new bootstrap.Toast(todosToasts[i]);
