@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contacte a FluXus Escola Artística no Porto. Morada, telefone e formulário de contacto.">
+    <meta name="description" content="Sobre a FluXus Escola Artística - 20 anos a formar artistas no Porto.">
     
     <link rel="stylesheet" href="css/bootstrap.min.css">  
     <link rel="stylesheet" href="css/style.css">
-    <!-- Bootstrap Icons (apenas 1 CDN) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <!-- Google Fonts - Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     
-    <title>Contactos - FluXus</title>
+    <title>Sobre Nós - FluXus</title>
 
 </head>
 
 <body>
-  <!-- ==================== HEADER / NAVBAR ==================== -->
+ <!-- ==================== HEADER / NAVBAR ==================== -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
             <div class="container-fluid">
@@ -58,6 +57,8 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="cursos.html">Todos os cursos</a></li>
                                 <li><a class="dropdown-item" href="curso-detalhe.html?curso=desenho">Curso em destaque</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="sobre.html">História da escola</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -73,77 +74,44 @@
     </header>
 
     <!-- ==================== MAIN ==================== -->
-    <main class="container shadow p-2 mb-4 rounded bg-dark">
-        <h1 class="text-center mb-2">Contactos</h1>
-        <p class="text-center mb-3">Poderá encontrar-nos na morada abaixo. Se preferir, use o formulário de contacto no final desta página.</p>
+    <main class="container py-4">
+        <h1 class="mb-4">Quem Somos</h1>
 
-        <!-- Mapa e informações -->
-        <div class="row mb-5">
-            <div class="col-12 col-md-6">
-                <iframe class=" rounded-3 w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3002.375655336092!2d-8.65445652356783!3d41.19178300810469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd2465fc7b5e36cb%3A0xa38ad9ec6e63f159!2sFluxus%20Escola%20Pintura!5e0!3m2!1spt-PT!2spt!4v1777773509580!5m2!1spt-PT!2spt" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização da FluXus no Google Maps"></iframe>
+        <!-- Secção História -->
+        <section id="historia" class=" bg-dark row align-items-center mb-5 rounded-4 py-3 px-2">
+            <div class="col-md-6">
+                <img src="/assets/img/pinturaoleo1.avif" alt="Atelier de pintura" class="img-fluid rounded shadow">
             </div>
-            <div class="col-12 col-md-6 text-center my-auto">
-                <div class="mb-3">
-                    <i class="bi bi-geo-alt fs-3"></i>
-                    <p class="text-center py-2 px-2"><strong>Morada:</strong><br> Rua do Sobreiro AC 38 (C. Comercial Londres) | 4464-429 Senhora da Hora</p>
-                </div>
-                <hr>
-                <div class="mb-3">
-                    <i class="bi bi-telephone fs-3"></i>
-                    <p class="text-center py-2 px-2"><strong>Telemóvel:</strong> 918 418 930</p>
-                </div>
-                <hr>
-                <div class="mb-3">
-                    <i class="bi bi-envelope fs-3"></i>
-                    <p class="text-center py-2 px-2"><strong>Email:</strong> fluxusescolartistica@gmail.com</p>
-                </div>
-                <hr>
-                <div>
-                    <i class="bi bi-clock fs-3"></i>
-                    <p class="text-center px-2"><strong>Horários:</strong><br> 2ª e 5ª: 10:30-12:30 | 14:30-20:00<br>Sábado: 10:30-12:30</p>
-                </div>
+            <div class="col-md-6">
+                <h2><i class="bi bi-book-fill me-2 text-laranja"></i>A Nossa História</h2><br>
+                <p>A <strong>FluXus - Escola Artística</strong> existe como escola de Desenho e Pintura há cerca de 20 anos, tendo contribuído para a formação na área das Artes Plásticas.
+                Os nossos alunos têm sido premiados em concursos internacionais, consecutivamente, nos últimos anos.
+                <br>
+                <br>
+                Estamos situados na cidade do Porto. Temos como objectivo dar formação nas mais variadas áreas, oferecendo a mais alta qualidade de ensino nas várias vertentes das Artes Plásticas.</p>
+                <p>Hoje, orgulhamo-nos de oferecer formação completa que vai desde o Desenho Clássico à Cerâmica Contemporânea, passando pela Olaria Tradicional e pela Azulejaria Histórica.</p>
             </div>
-        </div>
-        <hr>
-
-        <!-- Formulário de contacto -->
-        <section>
-            <h2 class="text-center mb-4">Envie-nos uma mensagem</h2>
-            <form id="formContacto" class="w-75 mx-auto" novalidate>
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome completo *</label>
-                    <input type="text" class="form-control" id="nome" placeholder="O seu nome" required minlength="3">
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email *</label>
-                    <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
-                </div>
-                <div class="mb-3">
-                    <label for="telefone" class="form-label">Telefone (opcional)</label>
-                    <input type="tel" class="form-control" id="telefone" placeholder="912345678">
-                </div>
-                <div class="mb-3">
-                    <label for="assunto" class="form-label">Assunto *</label>
-                    <select class="form-select" id="assunto" required>
-                        <option value="" selected disabled>Selecione um assunto...</option>
-                        <option value="inscricao">Inscrição em curso</option>
-                        <option value="informacao">Informações gerais</option>
-                        <option value="parceria">Parcerias</option>
-                        <option value="outro">Outro</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="mensagem" class="form-label">Mensagem *</label>
-                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Escreva a sua mensagem..." required minlength="10"></textarea>
-                </div>
-
-                <!-- Área de feedback (erros/sucesso) -->
-                <div id="erroFormulario" class="alert alert-danger" style="display: none;"></div>
-                <div id="sucessoFormulario" class="alert alert-success" style="display: none;"></div>
-
-                <button type="submit" class="btn btn-fluxus"><i class="bi bi-envelope-fill me-2"></i>Enviar mensagem</button>
-            </form>
         </section>
+
+        <!-- Secção Missão e Valores -->
+        <section class="row text-center mb-5">
+            <div class="bg-dark col-md-4 mb-3 py-4">
+                <i class="bi bi-bullseye sobre-icon"></i>
+                <h3>Missão</h3><br>
+                <p>Proporcionar uma formação artística de excelência, acessível a todas as idades e níveis de experiência, estimulando a criatividade individual.</p>
+            </div>
+            <div class="bg-dark col-md-4 mb-3 py-4 ">
+                <i class="bi bi-eye-fill sobre-icon"></i>
+                <h3>Visão</h3><br>
+                <p>Ser reconhecida como a escola de artes plásticas de referência em Portugal, formando artistas que deixam a sua marca no mundo.</p>
+            </div>
+            <div class="bg-dark col-md-4 mb-3 py-4">
+                <i class="bi bi-heart-fill sobre-icon"></i>
+                <h3>Valores</h3><br>
+                <p>Paixão pela arte, respeito pelo processo criativo, dedicação ao aluno e compromisso com a qualidade do ensino.</p>
+            </div>
+
+
     </main>
 
     <!-- ==================== FOOTER ==================== -->

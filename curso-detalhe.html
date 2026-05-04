@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detalhe dos cursos da FluXus Escola Artística.">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts - Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <title>Detalhe do Curso - FluXus</title>
+
+</head>
+
+<body>
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-white" href="index.html">
+                    <img src="assets/logo/logo.avif" alt="Logo FluXus" height="40" class="rounded-2">
+                </a>
+
+                <!-- Título central (visível em ecrãs grandes) -->
+                <div class="d-none d-lg-block position-absolute top-50 start-50 translate-middle text-white text-center">
+                    <medium>Atelier de Desenho, Pintura, Cerâmica, Olaria e Azulejaria</medium>
+                </div>
+
+                <!-- Botão hamburguer (mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menu de navegação -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ver mais
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="cursos.html">Todos os cursos</a></li>
+                                <li><a class="dropdown-item" href="curso-detalhe.html?curso=desenho">Curso em destaque</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- Barra de pesquisa -->
+                    <form id="formPesquisa" class="d-flex ms-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== MAIN: CONTEÚDO DE TODOS OS CURSOS ==================== -->
+    <main class="container py-4">
+
+
+        <!-- CURSO 1: DESENHO -->
+
+        <section id="curso-desenho" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Desenho</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/desenho2.avif" alt="Curso de Desenho" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 ">
+                    <h1>Curso de Desenho</h1>
+                    <p>Domine as técnicas fundamentais do desenho artístico e leve a sua criatividade ao próximo nível.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático Desenho -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionDesenho">
+                    <div class="accordion-item">
+                        <h2 class=" accordion-header">
+                            <button class=" accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modDes1">
+                                Módulo 1 – Fundamentos do Desenho
+                            </button>
+                        </h2>
+                        <div id="modDes1" class="accordion-collapse collapse show" data-bs-parent="#accordionDesenho">
+                            <div class=" text-black accordion-body">
+                                Proporção, composição, luz e sombra. Estudo de formas geométricas e objetos simples.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class=" accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modDes2">
+                                Módulo 2 – Figura Humana
+                            </button>
+                        </h2>
+                        <div id="modDes2" class="accordion-collapse collapse" data-bs-parent="#accordionDesenho">
+                            <div class=" text-black accordion-body">
+                                Anatomia básica, proporções do corpo humano, desenho de modelo vivo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class=" accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modDes3">
+                                Módulo 3 – Perspetiva e Paisagem
+                            </button>
+                        </h2>
+                        <div id="modDes3" class="accordion-collapse collapse" data-bs-parent="#accordionDesenho">
+                            <div class="text-black accordion-body">
+                                Perspetiva linear e atmosférica. Desenho de paisagem urbana e natural.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- CURSO 2: PINTURA -->
+ 
+        <section id="curso-pintura" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Pintura</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/pintura.avif" alt="Curso de Pintura" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 py-5">
+                    <h1>Curso de Pintura</h1>
+                    <p class="lead">Aprenda aguarela, acrílico e óleo com exercícios práticos e acompanhamento individual.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático Pintura -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionPintura">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modPin1">
+                                Módulo 1 – Fundamentos da Pintura
+                            </button>
+                        </h2>
+                        <div id="modPin1" class="accordion-collapse collapse show" data-bs-parent="#accordionPintura">
+                            <div class="text-black accordion-body">
+                                Teoria da cor, mistura de tintas, tipos de pincéis e suportes.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modPin2">
+                                Módulo 2 – Aguarela e Acrílico
+                            </button>
+                        </h2>
+                        <div id="modPin2" class="accordion-collapse collapse" data-bs-parent="#accordionPintura">
+                            <div class="text-black accordion-body">
+                                Técnicas de aguada, sobreposição de camadas e pintura rápida.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modPin3">
+                                Módulo 3 – Pintura a Óleo
+                            </button>
+                        </h2>
+                        <div id="modPin3" class="accordion-collapse collapse" data-bs-parent="#accordionPintura">
+                            <div class="text-black accordion-body">
+                                Velaturas, empaste, composição avançada e projeto final.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- CURSO 3: CERÂMICA -->
+
+        <section id="curso-ceramica" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Cerâmica</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/ceramica.avif" alt="Curso de Cerâmica" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 py-5">
+                    <h1>Curso de Cerâmica</h1>
+                    <p class="lead">Explore a arte do barro, da olaria à escultura, passando pelas técnicas manuais e de torno.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático Cerâmica -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionCeramica">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modCer1">
+                                Módulo 1 – Introdução ao Barro
+                            </button>
+                        </h2>
+                        <div id="modCer1" class="accordion-collapse collapse show" data-bs-parent="#accordionCeramica">
+                            <div class="text-black accordion-body">
+                                Tipos de barro, preparação da pasta e técnicas manuais básicas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modCer2">
+                                Módulo 2 – Torno de Oleiro
+                            </button>
+                        </h2>
+                        <div id="modCer2" class="accordion-collapse collapse" data-bs-parent="#accordionCeramica">
+                            <div class="text-black accordion-body">
+                                Centragem, subida de paredes e formas cilíndricas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modCer3">
+                                Módulo 3 – Decoração e Vidragem
+                            </button>
+                        </h2>
+                        <div id="modCer3" class="accordion-collapse collapse" data-bs-parent="#accordionCeramica">
+                            <div class="text-black accordion-body">
+                                Técnicas de engobe, esmaltação e cozedura (fornos elétricos e a gás).
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- CURSO 4: AZULEJARIA -->
+  
+        <section id="curso-azulejaria" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Azulejaria</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/azulejaria.avif" alt="Curso de Azulejaria" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 py-5">
+                    <h1>Curso de Azulejaria</h1>
+                    <p class="lead">Aprenda as técnicas tradicionais portuguesas de pintura e composição em azulejo.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático Azulejaria -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionAzulejo">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modAzu1">
+                                Módulo 1 – História do Azulejo
+                            </button>
+                        </h2>
+                        <div id="modAzu1" class="accordion-collapse collapse show" data-bs-parent="#accordionAzulejo">
+                            <div class="text-black accordion-body">
+                                A tradição do azulejo em Portugal: do século XV ao contemporâneo.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modAzu2">
+                                Módulo 2 – Técnica do Esgraffito
+                            </button>
+                        </h2>
+                        <div id="modAzu2" class="accordion-collapse collapse" data-bs-parent="#accordionAzulejo">
+                            <div class="text-black accordion-body">
+                                Técnica de incisão para criar desenhos detalhados.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modAzu3">
+                                Módulo 3 – Composição e Painéis
+                            </button>
+                        </h2>
+                        <div id="modAzu3" class="accordion-collapse collapse" data-bs-parent="#accordionAzulejo">
+                            <div class="text-black accordion-body">
+                                Criação de padrões e composições para painéis decorativos.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        
+        <!-- CURSO 5: RESTAURO -->
+        
+        <section id="curso-restauro" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Restauro</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/restauro.avif" alt="Curso de Restauro" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 py-5">
+                    <h1>Curso de Restauro</h1>
+                    <p class="lead">Aprenda a conservar e restaurar obras de arte e mobiliário com técnicas profissionais.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático Restauro -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionRestauro">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modRes1">
+                                Módulo 1 – Identificação de Materiais
+                            </button>
+                        </h2>
+                        <div id="modRes1" class="accordion-collapse collapse show" data-bs-parent="#accordionRestauro">
+                            <div class="text-black accordion-body">
+                                Madeiras, pigmentos e fibras antigas – análise e reconhecimento.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modRes2">
+                                Módulo 2 – Limpeza e Conservação
+                            </button>
+                        </h2>
+                        <div id="modRes2" class="accordion-collapse collapse" data-bs-parent="#accordionRestauro">
+                            <div class="text-black accordion-body">
+                                Métodos de limpeza química e mecânica para pinturas e esculturas.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modRes3">
+                                Módulo 3 – Reconstituição e Acabamento
+                            </button>
+                        </h2>
+                        <div id="modRes3" class="accordion-collapse collapse" data-bs-parent="#accordionRestauro">
+                            <div class="text-black accordion-body">
+                                Reconstituição volumétrica, reintegração cromática e proteção final.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+
+        <!-- CURSO 6: HISTÓRIA DA ARTE -->
+  
+        <section id="curso-historia" class="detalhe-curso">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a href="cursos.html">Cursos</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">História da Arte</li>
+                </ol>
+            </nav>
+
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="assets/img/historia.avif" alt="Curso de História da Arte" class="img-fluid curso-detalhe-img shadow">
+                </div>
+                <div class="container bg-dark rounded-4 col-md-6 py-5">
+                    <h1>Curso de História da Arte</h1>
+                    <p class="lead">Uma viagem pela arte desde a Antiguidade Clássica até às vanguardas do século XX.</p>
+                    
+                    <ul class="list-group list-group-flush mb-4">
+                        <li class="list-group-item"><strong><i class="bi bi-clock-fill me-2"></i>Duração:</strong> Contínua</li>
+                        <li class="list-group-item"><strong><i class="bi bi-calendar-check-fill me-2"></i>Horário:</strong> 2ª e 5ª: 10:30-12:30 & 14:30-20:00 | Sábado: 10:30-12:30</li>
+                        <li class="list-group-item"><strong><i class="bi bi-person-fill me-2"></i>Formador:</strong> Prof. António de Sousa</li>
+                    </ul>
+
+                    <a href="contacto.html" class="btn btn-fluxus btn-lg"><i class="bi bi-send-fill me-2"></i>Inscreva-se</a>
+                </div>
+            </div>
+
+            <!-- Conteúdo programático História da Arte -->
+            <section class="mt-5">
+                <h2>Conteúdo Programático</h2>
+                <div class="accordion" id="accordionHistoria">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#modHist1">
+                                Módulo 1 – Arte Clássica e Medieval
+                            </button>
+                        </h2>
+                        <div id="modHist1" class="accordion-collapse collapse show" data-bs-parent="#accordionHistoria">
+                            <div class="text-black accordion-body">
+                                Grécia, Roma, Românico e Gótico – arquitetura, escultura e pintura.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modHist2">
+                                Módulo 2 – Renascimento ao Rococó
+                            </button>
+                        </h2>
+                        <div id="modHist2" class="accordion-collapse collapse" data-bs-parent="#accordionHistoria">
+                            <div class="text-black accordion-body">
+                                Leonardo, Miguel Ângelo, Barroco e o drama da luz.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#modHist3">
+                                Módulo 3 – Modernismo e Contemporâneo
+                            </button>
+                        </h2>
+                        <div id="modHist3" class="accordion-collapse collapse" data-bs-parent="#accordionHistoria">
+                            <div class="text-black accordion-body">
+                                Do Impressionismo ao Cubismo, Surrealismo e arte digital.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black text-white text-center py-3 mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <p class="mb-0">&copy; FluXus - Escola Artística 2026</p>
+                <a href="https://www.facebook.com/fluxusescolaartistica" target="_blank" aria-label="Facebook"><img src="assets/logo/facebook_icon.svg" alt="Facebook" height="24"></a>
+                <a href="https://www.instagram.com/fluxusescolartistica/" target="_blank" aria-label="Instagram"><img src="assets/logo/instagram_icon.svg" alt="Instagram" height="24"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- NOSSO SCRIPT: só mostra o curso pedido no endereço -->
+    <script>
+        /**
+         * Script que mostra apenas o curso escolhido.
+         * Lê o endereço da página, por exemplo:
+         * curso-detalhe.html?curso=pintura
+         * e mostra apenas a secção desse curso.
+         */
+        (function() {
+            // 1. Obtém todas as secções de cursos
+            let todasSeccoes = document.querySelectorAll('.detalhe-curso');
+
+            // 2. Lê o parâmetro "curso" do endereço (URL)
+            let endereco = window.location.search; // ex: "?curso=pintura"
+            let paramCurso = '';
+
+            if (endereco) {
+                // Remove o "?" e divide pelo "="
+                let partes = endereco.substring(1).split('=');
+                if (partes.length === 2 && partes[0] === 'curso') {
+                    paramCurso = partes[1];
+                }
+            }
+
+            // 3. Se não veio parâmetro, assume "desenho" como padrão
+            if (!paramCurso) {
+                paramCurso = 'desenho';
+            }
+
+            // 4. ID da secção pretendida
+            let idDesejado = 'curso-' + paramCurso;
+
+            // 5. Esconde todas as secções e mostra só a certa
+            for (let i = 0; i < todasSeccoes.length; i++) {
+                let seccao = todasSeccoes[i];
+                if (seccao.id === idDesejado) {
+                    seccao.style.display = '';
+                } else {
+                    seccao.style.display = 'none';
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

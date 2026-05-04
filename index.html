@@ -1,106 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS-->
-    <link rel="stylesheet" href="css/bootstrap.min.css">  
-    <!-- Regular CSS ||| CSS normal fica depois porque o bootstrap carrega primeiro e o CSS depois altera o necessário --> 
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="FluXus - Escola Artística no Porto. Cursos de Desenho, Pintura, Cerâmica e mais.">
     
-    <title>Home - FluXus Escola Artística</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts - Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <title>FluXus - Escola Artística | Home</title>
+
 </head>
 
-<!-- BODY -->
-
 <body>
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-white" href="index.html">
+                    <img src="assets/logo/logo.avif" alt="Logo FluXus" height="40" class="rounded-2">
+                </a>
 
+                <!-- Título central (visível em ecrãs grandes) -->
+                <div class="d-none d-lg-block position-absolute top-50 start-50 translate-middle text-white text-center">
+                    <medium>Atelier de Desenho, Pintura, Cerâmica, Olaria e Azulejaria</medium>
+                </div>
 
-<!-- HEADER -->
-<header>
+                <!-- Botão hamburguer (mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <!-- Menu de navegação -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ver mais
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="cursos.html">Todos os cursos</a></li>
+                                <li><a class="dropdown-item" href="curso-detalhe.html?curso=desenho">Curso em destaque</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
+                    <!-- Barra de pesquisa -->
+                    <form id="formPesquisa" class="d-flex ms-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- update 1-->
+
+    <!-- ==================== MAIN (CONTEÚDO PRINCIPAL) ==================== -->
+    <main>
+        <!-- Carousel de imagens -->
+        <section class=" d-flex justify-content-center my-3">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade w-75" data-bs-ride="carousel">
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="/assets/img/azulejaria2.avif" class="d-block w-100" alt="Imagem de uma pintura">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/ceramica2.avif" class="d-block w-100" alt="Cerâmica artesanal">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/assets/img/desenho2.avif" class="d-block w-100" alt="Aula de desenho">
+                    </div>
+                </div>
+                <!-- Controlos do carousel -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Seguinte</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Secção Sobre a Escola -->
+        <section class="container bg-dark py-3 rounded-2">
+            <div class="text-center">
+                <h1 class="mb-4">Sobre a Escola</h1>
+                <p class="lead">
+                    A <strong>FluXus</strong> existe como escola de Artes há cerca de 20 anos. Os nossos alunos têm sido premiados em concursos internacionais, consecutivamente, nos últimos 3 anos. Estamos situados na cidade do Porto. Temos como objetivo dar formação nas mais variadas áreas, oferecendo a mais alta qualidade de ensino nas várias vertentes das Artes Plásticas: Desenho, Pintura, Cerâmica, Olaria, Azulejaria, Restauro, História da Arte e História da Arte Contemporânea.
+                </p>
+            </div>
+        </section>
+
+        <br>
+
+        <!-- Secção de Cursos em destaque (cards) -->
+        <section class="container shadow p-3 mb-5 rounded-2 bg-dark">
+            <h1 class="text-center mb-4">Cursos em Destaque</h1>
+
+            <div class="row">
+                <!-- Curso 1: Desenho -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="/assets/img/desenho1.avif" class="card-img-top" alt="Curso de Desenho">
+                        <div class="card-body">
+                            <h5 class="card-title">Desenho <span class="badge">Contínuo</span></h5>
+                            <p class="card-text">Aprenda técnicas de realismo, sombra e perspectiva.</p>
+                            <!-- Botão que dispara o Toast -->
+                            <a href="#" id="liveToastBtn" class="btn btn-fluxus" data-curso="Desenho">Adicionar à lista de interesses</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toast de feedback -->
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast bg-dark text-white" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-header bg-success text-white">
+                            <img src="assets/logo/logo.avif" class="rounded me-2" alt="Logo" height="20">
+                            <strong class="me-auto">FluXus</strong>
+                            <small>Agora mesmo</small>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Fechar"></button>
+                        </div>
+                        <div class="toast-body">
+                            Adicionado à lista!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 2: Pintura -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="/assets/img/pintura1.avif" class="card-img-top" alt="Curso de Pintura">
+                        <div class="card-body">
+                            <h5 class="card-title">Pintura <span class="badge">Contínuo</span></h5>
+                            <p class="card-text">Aguarela, Acrílico, Óleo – todos os níveis.</p>
+                            <a href="cursos.html" class="btn btn-fluxus">Saber mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso 3: Cerâmica -->
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                    <div class="card mx-auto" style="width: 18rem;">
+                        <img src="/assets/img/azulejaria2.avif" class="card-img-top" alt="Curso de Cerâmica">
+                        <div class="card-body">
+                            <h5 class="card-title">Cerâmica <span class="badge">Contínuo</span></h5>
+                            <p class="card-text">Olaria, Azulejaria, Escultura – para todas as idades.</p>
+                            <a href="cursos.html" class="btn btn-fluxus">Saber mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black text-white text-center py-3 mt-5">
         <div class="container">
-
-            <a class="navbar-brand text-white" href="index.html">
-                <img src="/assets/logo/logo.avif" alt="Logo" height="40" align-left> </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="cursos.html">Cursos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-                            Ver mais
-                        </a>
-
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-                        </ul>
-                    </li>
-                </ul>
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-light" type="submit">Procurar</button>
-                </form>
-
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <p class="mb-0" >&copy; FluXus - Escola Artística 2026</p>
+                <a href="https://www.facebook.com/fluxusescolaartistica" target="_blank" aria-label="Facebook da FluXus">
+                    <img src="assets/logo/facebook_icon.svg" alt="Facebook" height="24">
+                </a>
+                <a href="https://www.instagram.com/fluxusescolartistica/" target="_blank" aria-label="Instagram da FluXus">
+                    <img src="assets/logo/instagram_icon.svg" alt="Instagram" height="24">
+                </a>
             </div>
         </div>
-    </nav>
+    </footer>
 
-
-
-
-</header>
-
-
-<!-- MAIN -->
-<h1> Escola de Desenho, Pintura, Cerâmica, Olaria, Azulejaria</h1>
-
-<p>A FluXus existe como escola de Artes há cerca de 20 anos.
-Os nossos alunos têm sido premiados em concursos internacionais, consecutivamente, nos últimos 3 anos.
-Estamos situados na cidades de Porto. Temos como objectivo dar formação nas mais variadas áreas, oferecendo a mais alta qualidade de ensino nas várias vertentes das Artes Plásticas.
- Desenho, Pintura, Cerâmica, Olaria, Azulejaria, Restauro, História da Arte e História da Arte Contemporânea. </p>
-
-
-    
-<br>
-<br>
-<br>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
-
-
-
-<!-- FOOTER -->
-
-
-
-
-    <!-- Bootstrap JS Bundle () -->
+    <!-- Bootstrap JS Bundle + nosso JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
-
-
+    <script src="js/main.js"></script>
 </body>
-
 </html>

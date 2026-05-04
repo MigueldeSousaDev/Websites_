@@ -1,99 +1,187 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Cursos da FluXus: Desenho, Pintura, Cerâmica, Olaria, Azulejaria e mais.">
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts - Cormorant Garamond -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    
+    <title>Cursos - FluXus Escola Artística</title>
+
 </head>
 
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<body>
+ <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand text-white" href="index.html">
+                    <img src="assets/logo/logo.avif" alt="Logo FluXus" height="40" class="rounded-2">
+                </a>
 
-        <div class="container">
+                <!-- Título central (visível em ecrãs grandes) -->
+                <div class="d-none d-lg-block position-absolute top-50 start-50 translate-middle text-white text-center">
+                    <medium>Atelier de Desenho, Pintura, Cerâmica, Olaria e Azulejaria</medium>
+                </div>
 
-            <a class="navbar-brand text-white" href="index.html">
-                <img src="/assets/logo/logo.avif" alt="Logo" height="40" align-left> </a>
+                <!-- Botão hamburguer (mobile) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <!-- Menu de navegação -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="cursos.html">Cursos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Ver mais
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="cursos.html">Todos os cursos</a></li>
+                                <li><a class="dropdown-item" href="curso-detalhe.html?curso=desenho">Curso em destaque</a></li>
+                            </ul>
+                        </li>
+                    </ul>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Barra de pesquisa -->
+                    <form id="formPesquisa" class="d-flex ms-auto" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                        <button class="btn btn-outline-light" type="submit">Pesquisar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <!-- ==================== MAIN ==================== -->
+    <main class="container py-4">
+        <h1 class=" container bg-dark rounded-3 mb-4">Os Nossos Cursos</h1>
 
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" href="#">Home</a>
-                    </li>
+        <!-- Filtro de cursos -->
+        <div class="row mb-4">
+            <div class="col-md-6 mx-auto">
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-search"></i></span>
+                    <input type="text" id="filtroCursos" class="form-control" placeholder="Filtrar cursos... (ex: pintura, cerâmica)">
+                    <button class="btn btn-outline-secondary mostrarTodos" type="button" bg-secondary id="mostrarTodos">Mostrar resultados</button>
+                </div>
+            </div>
+        </div>
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="cursos.html">Cursos</a>
-                    </li>
+        <!-- Grelha de cursos (data-categoria para o filtro JS) -->
+        <div class="row" id="listaCursos">
 
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="contacto.html">Contacto</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
-                            Ver mais
-                        </a>
-
-                        <ul class="dropdown-menu">
-
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-
-                        </ul>
-                    </li>
-
-
-                </ul>
-
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search">
-                    <button class="btn btn-outline-light" type="submit">Procurar</button>
-                </form>
-
+            
+            <!-- Curso 1 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="desenho realismo">
+                    <img src="/assets/img/desenho3.avif" class="card-img-top" alt="Curso de Desenho">
+                    <div class="card-body">
+                        <h5 class="card-title">Desenho</h5>
+                        <p class="card-text">Técnicas de realismo, sombra, perspectiva e anatomia.</p>
+                        <span class="badge bg-success mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
             </div>
 
+            <!-- Curso 2 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="pintura aguarela acrilico oleo">
+                    <img src="https://picsum.photos/300/180?12" class="card-img-top" alt="Curso de Pintura">
+                    <div class="card-body">
+                        <h5 class="card-title">Pintura</h5>
+                        <p class="card-text">Aguarela, Acrílico, Óleo – todos os níveis.</p>
+                        <span class="badge mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html?curso=pintura" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="cerâmica olaria escultura">
+                    <img src="https://picsum.photos/300/180?13" class="card-img-top" alt="Curso de Cerâmica">
+                    <div class="card-body">
+                        <h5 class="card-title">Cerâmica</h5>
+                        <p class="card-text">Olaria, Têxtil, Escultura – para todas as idades.</p>
+                        <span class="badge mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html?curso=ceramica" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 4 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="azulejaria restauro">
+                    <img src="https://picsum.photos/300/180?14" class="card-img-top" alt="Curso de Azulejaria">
+                    <div class="card-body">
+                        <h5 class="card-title">Azulejaria</h5>
+                        <p class="card-text">Técnicas tradicionais portuguesas.</p>
+                        <span class="badge mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html?curso=azulejaria" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 5 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="restauro conservacao">
+                    <img src="https://picsum.photos/300/180?15" class="card-img-top" alt="Curso de Restauro">
+                    <div class="card-body">
+                        <h5 class="card-title">Restauro</h5>
+                        <p class="card-text">Conservação de obras de arte e mobiliário.</p>
+                        <span class="badge mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html?curso=restauro" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Curso 6 -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4">
+                <div class="card card-curso mx-auto" style="width: 18rem;" data-categoria="historia arte contemporanea">
+                    <img src="https://picsum.photos/300/180?16" class="card-img-top" alt="Curso de História da Arte">
+                    <div class="card-body">
+                        <h5 class="card-title">História da Arte</h5>
+                        <p class="card-text">Da Arte Clássica à Arte Contemporânea.</p>
+                        <span class="badge bg-success mb-2">Contínuo</span>
+                        <a href="curso-detalhe.html?curso=historia" class="btn btn-fluxus">Ver detalhes</a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </main>
 
-    </nav>
-</header>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-black text-white text-center py-3 mt-5">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-3">
+                <p class="mb-0">&copy; FluXus - Escola Artística 2026</p>
+                <a href="https://www.facebook.com/fluxusescolaartistica" target="_blank" aria-label="Facebook"><img src="assets/logo/facebook_icon.svg" alt="Facebook" height="24"></a>
+                <a href="https://www.instagram.com/fluxusescolartistica/" target="_blank" aria-label="Instagram"><img src="assets/logo/instagram_icon.svg" alt="Instagram" height="24"></a>
+            </div>
+        </div>
+    </footer>
 
-
-
-
-<body>
-    
-
-
-
-
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
-
-
-
-
-
-<footer class="bg-dark text-white text-center py-0 mt-5">
-    <div class="container py-2">
-        <div class="d-flex justify-content-center align-items-center gap-3">
-            <p class="mb-0">
-            FluXus - Escola Artística @2026
-            </p>
-            <a href="https://www.facebook.com/fluxusescolaartistica" target="_blank">
-            <img src="/assets/logo/facebook_icon.svg" alt="Facebook" height="24">
-            </a>
-            <a href="https://www.instagram.com/fluxusescolartistica/" target="_blank">
-            <img src="/assets/logo/instagram_icon.svg" alt="Instagram" height="24">
-            </a>
-        </div>
-    </div>
-</footer>
-
 </html>
