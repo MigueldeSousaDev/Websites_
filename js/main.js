@@ -20,12 +20,15 @@ document.addEventListener('DOMContentLoaded', function() {
         toastTrigger.addEventListener('click', function(evento) {
             evento.preventDefault();
 
+            /* 'data-curso- adicionado para o Toaster */
             let nomeCurso = toastTrigger.getAttribute('data-curso') || 'Curso';
-            let toastBody = toastLiveExample.querySelector('.toast-body');
+            let toastBody = toastLiveExample.querySelector('.toast-body'); /* Mensagem do toaster com sua classe */
             if (toastBody) {
+                /* Adicionar conteúdo do "print" */
                 toastBody.textContent = '"' + nomeCurso + '" foi adicionado à sua lista de interesses!';
             }
 
+            /* Executa o print */
             toastBootstrap.show();
         });
     }
@@ -34,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 2. FILTRO DE CURSOS (PÁGINA cursos.html)
     //    - Campo #filtroCursos
     //    - Função partilhada com a barra do cabeçalho
-    // =====================================================================
+
 
     // Elementos que podem não existir em todas as páginas
     let inputFiltro = document.getElementById('filtroCursos');
