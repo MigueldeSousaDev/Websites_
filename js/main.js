@@ -2,7 +2,8 @@
  * Funcionalidades:
  * 1. Toast "Adicionar à lista de interesses"
  * 2. Filtro de cursos (campo local + barra do cabeçalho)
- * 3. Validação do formulário de contacto
+ * 3. NavBar > Pesquisa
+ * 4. Validação do formulário de contacto
  */
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. TOAST (NOTIFICAÇÃO)
     // =====================================================================
     let toastTrigger = document.getElementById('liveToastBtn');
-    let toastLiveExample = document.getElementById('liveToast');
+    let toastLiveExample = document.getElementById('liveToastFeedback');
 
     if (toastTrigger && toastLiveExample) {
         let toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
