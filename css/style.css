@@ -136,10 +136,8 @@ p {
 /* Accordion mudanca cores */
 
 
-/* ==========================================
-   ACORDEÃO (Conteúdo Programático)
-   Fundo escuro, sem contorno azul
-   ========================================== */
+/* 
+   ---------- ACORDEÃO (Conteúdo Programático) ---- Fundo escuro, sem contorno azul ---- */
 
 section{
     font-family: var(--bs-body-font-family);
